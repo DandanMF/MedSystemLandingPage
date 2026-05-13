@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Heart, User, ShieldCheck, Activity, Stethoscope, AlertTriangle, ClipboardList, Sparkles } from "lucide-react";
-import heroMedical from "@/assets/hero-medical.jpg";
-import doctorTablet from "@/assets/doctor-tablet.jpg";
+import { Heart, User, ShieldCheck, Activity, Stethoscope, AlertTriangle, ClipboardList, Sparkles, ArrowUp } from "lucide-react";
+import heroMedical from "@/assets/hero-medical.png";
+import doctorTablet from "@/assets/doctor-tablet.png";
 
-const PLATFORM_URL = "#";
+// const PLATFORM_URL = "https://eng-soft-front2.vercel.app";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -73,17 +73,19 @@ function Nav() {
     <nav className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Logo size="sm" />
+        <div className="flex items-center gap-8">
         <div className="hidden items-center gap-8 md:flex">
           <a href="#problema" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Problema</a>
           <a href="#como-funciona" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Como funciona</a>
           <a href="#beneficios" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Benefícios</a>
         </div>
         <a
-          href={PLATFORM_URL}
+          href={"https://eng-soft-front2.vercel.app"}
           className="rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-all hover:brightness-110 hover:shadow-[0_0_30px_-5px_var(--primary)]"
         >
           Teste agora
         </a>
+        </div>
       </div>
     </nav>
   );
@@ -95,9 +97,6 @@ function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--primary)_0%,_transparent_50%)] opacity-20" />
       <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 pt-20 pb-28 lg:grid-cols-2">
         <div className="animate-reveal">
-          <div className="mb-8">
-            <Logo />
-          </div>
           <h1 className="mb-6 text-balance text-5xl font-bold leading-[1.05] tracking-tight md:text-6xl">
             Sistema Inteligente de Prescrição Médica
           </h1>
@@ -108,16 +107,10 @@ function Hero() {
           </p>
           <div className="flex flex-wrap items-center gap-4">
             <a
-              href={PLATFORM_URL}
+              href={"https://eng-soft-front2.vercel.app"}
               className="inline-flex items-center gap-2 rounded-lg bg-primary px-7 py-4 text-sm font-semibold text-primary-foreground transition-all hover:brightness-110 hover:shadow-[0_0_40px_-5px_var(--primary)]"
             >
               <Sparkles className="size-4" /> Teste agora gratuitamente
-            </a>
-            <a
-              href={PLATFORM_URL}
-              className="inline-flex items-center gap-2 rounded-lg border border-border bg-card/50 px-7 py-4 text-sm font-semibold text-foreground transition-colors hover:bg-card"
-            >
-              Solicitar demonstração
             </a>
           </div>
           <p className="mt-8 text-xs text-muted-foreground">
@@ -132,17 +125,8 @@ function Hero() {
               alt="MedSystem — análise inteligente de prescrições médicas"
               width={1280}
               height={1280}
-              className="aspect-square w-full object-cover"
+              className="aspect-[16/9] w-full object-cover opacity-90"
             />
-            <div className="absolute bottom-4 left-4 right-4 flex items-center gap-3 rounded-xl border border-border bg-card/80 p-3 backdrop-blur-md">
-              <div className="grid size-10 place-items-center rounded-lg bg-success/15">
-                <ShieldCheck className="size-5 text-success" />
-              </div>
-              <div className="text-sm">
-                <div className="font-semibold">Prescrição validada</div>
-                <div className="text-xs text-muted-foreground">Sem interações críticas detectadas</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -219,8 +203,8 @@ function HowItWorks() {
   return (
     <section id="como-funciona" className="border-t border-border bg-secondary/30 px-6 py-28">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-16 max-w-2xl">
-          <span className="mb-3 block text-xs font-semibold uppercase tracking-widest text-primary">Fluxo de Trabalho</span>
+        <div className="mb-4 max-w-2xl">
+          <span className="mb-2 block text-xs font-semibold uppercase tracking-widest text-primary">Fluxo de Trabalho</span>
           <h2 className="text-4xl font-bold tracking-tight md:text-5xl">Simplicidade que salva vidas.</h2>
         </div>
 
@@ -243,7 +227,7 @@ function HowItWorks() {
               width={1024}
               height={1280}
               loading="lazy"
-              className="aspect-[4/5] w-full object-cover opacity-90"
+              className="aspect-[4/3] w-full object-cover opacity-90"
             />
           </div>
         </div>
@@ -287,18 +271,19 @@ function FinalCTA() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--primary)_0%,_transparent_60%)] opacity-20" />
       <div className="relative mx-auto max-w-3xl px-6 text-center">
         <h2 className="mb-6 text-4xl font-bold tracking-tight md:text-5xl">
-          Eleve o padrão de segurança da sua clínica.
+          Pronto para transformar sua prática médica?
         </h2>
         <p className="mb-10 text-lg text-muted-foreground">
-          Solicite uma demonstração gratuita e veja em minutos como o MedSystem
-          pode transformar sua prática médica.
+          Comece agora — gratuitamente — e veja em minutos como o MedSystem
+          eleva o padrão de segurança da sua clínica.
         </p>
-        <a
-          href={PLATFORM_URL}
+        <button
+          type="button"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="inline-flex items-center gap-2 rounded-lg bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground transition-all hover:brightness-110 hover:shadow-[0_0_40px_-5px_var(--primary)]"
         >
-          <Sparkles className="size-4" /> Solicitar demonstração gratuita
-        </a>
+          <ArrowUp className="size-4" /> Voltar ao topo
+        </button>
       </div>
     </section>
   );
@@ -311,8 +296,8 @@ function Footer() {
         <Logo size="sm" />
         <p className="text-xs text-muted-foreground">© 2026 MedSystem · Tecnologia a serviço da vida</p>
         <div className="flex gap-6 text-xs text-muted-foreground">
-          <a href="#" className="transition-colors hover:text-foreground">Privacidade</a>
-          <a href="#" className="transition-colors hover:text-foreground">Termos</a>
+          {/* <a href="#" className="transition-colors hover:text-foreground">Privacidade</a>
+          <a href="#" className="transition-colors hover:text-foreground">Termos</a> */}
         </div>
       </div>
     </footer>

@@ -107,7 +107,7 @@ function Nav() {
             </a>
           </div>
           <a
-            href={"https://eng-soft-front2.vercel.app"}
+            href={"https://medsystem.up.railway.app"}
             className="rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-all hover:brightness-110 hover:shadow-[0_0_30px_-5px_var(--primary)]"
           >
             Teste agora
@@ -134,7 +134,7 @@ function Hero() {
           </p>
           <div className="flex flex-wrap items-center gap-4">
             <a
-              href={"https://eng-soft-front2.vercel.app"}
+              href={"https://medsystem.up.railway.app"}
               className="inline-flex items-center gap-2 rounded-lg bg-primary px-7 py-4 text-sm font-semibold text-primary-foreground transition-all hover:brightness-110 hover:shadow-[0_0_40px_-5px_var(--primary)]"
             >
               <Sparkles className="size-4" /> Teste agora gratuitamente

@@ -35,17 +35,17 @@
   --foreground: oklch(0.99 0 0);
   --card: oklch(0.22 0.04 255);
   --card-foreground: oklch(0.99 0 0);
-  --primary: oklch(0.65 0.20 255);
+  --primary: oklch(0.65 0.2 255);
   --primary-foreground: oklch(0.99 0 0);
   --secondary: oklch(0.25 0.04 255);
   --secondary-foreground: oklch(0.99 0 0);
   --muted: oklch(0.25 0.03 255);
-  --muted-foreground: oklch(0.70 0.02 255);
-  --accent: oklch(0.65 0.20 255);
+  --muted-foreground: oklch(0.7 0.02 255);
+  --accent: oklch(0.65 0.2 255);
   --accent-foreground: oklch(0.99 0 0);
-  --success: oklch(0.70 0.17 160);
-  --border: oklch(1 0 0 / 0.10);
-  --ring: oklch(0.65 0.20 255);
+  --success: oklch(0.7 0.17 160);
+  --border: oklch(1 0 0 / 0.1);
+  --ring: oklch(0.65 0.2 255);
   --popover: var(--card);
   --popover-foreground: var(--foreground);
   --destructive: oklch(0.62 0.23 27);
@@ -66,8 +66,14 @@
 }
 
 @keyframes reveal {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-reveal {

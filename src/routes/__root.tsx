@@ -73,9 +73,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "MedSystem — Sistema Inteligente de Prescrição Médica" },
-      { name: "description", content: "MedSystem analisa prontuários e histórico do paciente em segundos para validar prescrições e condutas, evitando erros clínicos e interações medicamentosas." },
+      {
+        name: "description",
+        content:
+          "MedSystem analisa prontuários e histórico do paciente em segundos para validar prescrições e condutas, evitando erros clínicos e interações medicamentosas.",
+      },
       { property: "og:title", content: "MedSystem — Prescrição Digital Inteligente" },
-      { property: "og:description", content: "Análise automática de conflitos medicamentosos e contraindicações para maior segurança do paciente." },
+      {
+        property: "og:description",
+        content:
+          "Análise automática de conflitos medicamentosos e contraindicações para maior segurança do paciente.",
+      },
       { property: "og:type", content: "website" },
     ],
     links: [
